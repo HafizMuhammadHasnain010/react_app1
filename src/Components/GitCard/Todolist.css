@@ -1,0 +1,118 @@
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #f8f9fa;
+}
+
+.app {
+  max-width: 700px;
+  margin: 30px auto;
+  padding: 20px;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 20px;
+  margin-top: -10px;
+  color: #007bff;
+}
+
+.todo-list {
+  list-style: none;
+  padding: 0;
+  max-height: 200px; /* Adjust the max-height as needed */
+  overflow-y: auto; /* Enable vertical scrollbar if needed */
+}
+
+.todo-item {
+  display: flex;
+  flex-direction: column; /* Stack elements vertically on small screens */
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 10px;
+  border: 1px solid #ced4da;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.remove-btn,
+.edit-btn {
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 4px;
+  margin-bottom: 5px; /* Space between buttons on small screens */
+  margin-right: 10px;
+}
+
+.edit-btn {
+  background-color: gray;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 4px;
+  margin-top: 15px;
+  margin-bottom: 5px; /* Space between buttons on small screens */
+  margin-right: 10px;
+}
+
+.remove-btn:hover,
+.edit-btn:hover {
+  background-color: #c82333;
+}
+
+.edit-btn:hover {
+  background-color: darkgrey;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column; /* Stack input and button vertically on small screens */
+  margin-top: 20px;
+}
+
+input {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  margin-bottom: 10px; /* Space between input and button on small screens */
+  font-size: 14px;
+}
+
+.add-btn {
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  padding: 8px 15px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.add-btn:hover {
+  background-color: #218838;
+}
+
+/* Media Query for Small Screens */
+@media only screen and (max-width: 480px) {
+  .todo-item {
+    align-items: center; /* Center-align items on small screens */
+  }
+
+  .remove-btn,
+  .edit-btn {
+    margin-right: 0; /* Remove right margin for buttons on small screens */
+    margin-right: 15px;
+  }
+}
